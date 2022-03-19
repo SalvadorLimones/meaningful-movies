@@ -77,7 +77,7 @@ body .header {
 
 body .header h1 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.2rem;
 }
 
@@ -93,6 +93,7 @@ body .header span {
 
 body .movie-card-container {
   max-width: 1000px;
+  padding: 0 30px;
   margin: 60px auto;
   z-index: 1;
   display: -webkit-box;
@@ -100,16 +101,90 @@ body .movie-card-container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .movie-card-container .movie-card {
+  max-width: 400px;
   margin: 45px 10px;
   padding: 40px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  background: #efd592;
+  color: #242d38;
+}
+
+body .movie-card-container .movie-card .movie-number {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border: 1px solid #efd592;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #242d38;
+  color: #efd592;
+  font-size: 24px;
+}
+
+body .movie-card-container .movie-card .movie-title {
+  font-size: 36px;
+  font-weight: 400;
+  width: 100%;
+}
+
+body .movie-card-container .movie-card .movie-sub,
+body .movie-card-container .movie-card .movie-text {
+  font-size: 18px;
+  font-weight: 400;
+  width: 100%;
+}
+
+body .movie-card-container .movie-card .movie-text {
+  margin-bottom: 20px;
+}
+
+body .movie-card-container .movie-card .movie-line {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0;
+  background: #242d38;
+}
+
+body .movie-card-container .movie-card .movie-button {
+  width: calc(100% - 80px);
+  height: 60px;
+  position: absolute;
+  left: 40px;
+  bottom: -30px;
+  border: 1px solid #efd592;
+  background: #242d38;
+  color: #efd592;
+  font-size: 14px;
+}
+
+body .movie-card-container .movie-card .movie-button:hover {
+  border-color: #242d38;
   background: #efd592;
   color: #242d38;
 }

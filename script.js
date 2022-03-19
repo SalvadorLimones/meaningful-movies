@@ -46,8 +46,9 @@ movies.map((movie, i) => {
   beerHTML += `
     <div class="movie-card">
       <p class="movie-number">${i + 1}</p>
-      <p class="movie-title">${movie.title}</p>
+      <h3 class="movie-title">${movie.title}</h3>
       <p class="movie-sub">${movie.sub}</p>
+      <div class="movie-line"></div>
       <p class="movie-text">${movie.text}</p>
       <button class="movie-button">
       Watch
